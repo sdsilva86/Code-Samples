@@ -2,8 +2,6 @@
  /**Controller to auto add items to Cart**/
 namespace Envoy\Test\Controller\Index;
  
-use Magento\Framework\App\Action\Context;
-use Magento\Framework\Controller\ResultFactory; 
  
 class Index extends \Magento\Framework\App\Action\Action
 {
@@ -21,8 +19,7 @@ class Index extends \Magento\Framework\App\Action\Action
     {
         $this->_cart = $cart;
         $this->_product = $product;
-		 $this->_formKey = $formKey;
-		$objectManager = \Magento\Framework\App\ObjectManager::getInstance();
+		$this->_formKey = $formKey;
 
         return parent::__construct($context);
     }
